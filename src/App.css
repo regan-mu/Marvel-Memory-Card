@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@300;400;500&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root{
+  --font-1: 'Roboto', sans-serif;
+  --font-2: 'Bangers', cursive;
+}
+body {
+  position: relative;
+  background-color: rgb(223, 223, 223);
+  overflow-x: hidden;
+  font-family: var(--font-1);
+}
+.header {
+  width: 100%;
+  height: 8rem;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 5px 5px 10px rgb(187, 187, 187);
+  background-color: #FFC54D;
+  font-family: var(--font-2);
+}
+.header h1 {
+  font-size: 4rem;
+  letter-spacing: 1.5px;
+  color: #ec1d24;
+  text-shadow: 5px 5px 3px #000;
+}
+.header .scores {
+  font-size: 1.5rem;
+  letter-spacing: 1.3px;
+  width: 20rem;
+  display: flex;
+  justify-content: space-between;
+}
+.characters {
+  width: 100%;
+  height: auto;
+  padding: 2rem 3rem;
+  display: grid;
+  grid-template: repeat(3, 300px) / repeat(4, 1fr);
+  gap: 24px;
+}
+.characters .card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-shadow: 3px 3px 5px rgb(138, 138, 138);
+  transition: transform 0.3s linear;
+  cursor: pointer;
+}
+.card .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgb(201, 201, 201, 0.1);
+}
+.characters .card:hover {
+  transform: scale(1.03);
+  box-shadow: 5px 5px 10px 2px rgb(102, 102, 102);
+}
+.card .img-section {
+  width: 100%;
+  height: auto;
+}
+.card .img-section img {
+  height: 10rem;
+}
+.card h3 {
+  font-size: 2rem;
+  letter-spacing: 1.3px;
+  font-weight: 300;
+}
